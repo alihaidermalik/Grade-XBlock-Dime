@@ -5,6 +5,7 @@ from web_fragments.fragment import Fragment
 from xblock.core import XBlock
 from xblockutils.resources import ResourceLoader
 from xblock.fields import Integer, Scope, String
+from django.contrib.auth.models import User
 
 loader = ResourceLoader(__name__)
 
@@ -34,12 +35,11 @@ class GradeXBlock(XBlock):
         The primary view of the GradeXBlock, shown to students
         when viewing courses.
         """
-        user_service = self.runtime.service(self, 'user')
-        xb_user = user_service.get_current_user()
+        user = User.objects.get(id=self.scope_ids.user_id)
 
         context.update({
             "self": self,
-            "username": xb_user.full_name
+            "user": user
         })
 
         fragment = Fragment()
