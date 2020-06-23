@@ -1,0 +1,13 @@
+setup.py
+gradexblock/__init__.py
+gradexblock/gradexblock.py
+gradexblock/static/README.txt
+gradexblock/static/css/gradexblock.css
+gradexblock/static/html/gradexblock.html
+gradexblock/static/js/src/gradexblock.js
+gradexblock_xblock.egg-info/PKG-INFO
+gradexblock_xblock.egg-info/SOURCES.txt
+gradexblock_xblock.egg-info/dependency_links.txt
+gradexblock_xblock.egg-info/entry_points.txt
+gradexblock_xblock.egg-info/requires.txt
+gradexblock_xblock.egg-info/top_level.txt
