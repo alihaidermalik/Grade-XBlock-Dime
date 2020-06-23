@@ -34,8 +34,12 @@ class GradeXBlock(XBlock):
         The primary view of the GradeXBlock, shown to students
         when viewing courses.
         """
+        user_service = self.runtime.service(self, 'user')
+        xb_user = user_service.get_current_user()
+
         context.update({
-            "self": self
+            "self": self,
+            "username": xb_user.full_name
         })
 
         fragment = Fragment()
